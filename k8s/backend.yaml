@@ -47,6 +47,12 @@ spec:
                 secretKeyRef:
                   name: backend-secret
                   key: S3_BUCKET_NAME
+            - name: DB_URL
+              value: "${DB_URL}"
+            - name: DB_USERNAME
+              value: "${DB_USERNAME}"
+            - name: DB_PASSWORD
+              value: "${DB_PASSWORD}"
           readinessProbe:
             httpGet:
               path: /health
